@@ -94,7 +94,6 @@ Intercom.registerIdentifiedUser({ userId: 'bob' });
 Intercom.registerIdentifiedUser({ userId: 'bob' })
 Intercom.updateUser({
     // Pre-defined user attributes
-    // (this attributes will be added in custom_attributes as duplicate)
     email: 'mimi@intercom.com',
     user_id: 'user_id',
     name: 'your name',
@@ -106,8 +105,9 @@ Intercom.updateUser({
         // Only supported for iOS now
         // Parameters: IntercomUserAttribtesBuilder.m -> companyForDictionary()
     }],
-    // Other custom_attributes
-    ... 
+    custom_attributes: {
+        my_custom_attribute: 123
+    },
 });
 ```
 
